@@ -6,6 +6,7 @@ import "./App.css";
 import Header from "./Header/Header";
 import Compose from "./Compose/Compose";
 import Post from "./Post/Post";
+
 class App extends Component {
   constructor() {
     super();
@@ -59,8 +60,8 @@ class App extends Component {
               id={post.id}
               text={post.text}
               date={post.date}
-              updatePost={this.updatePost}
-              deletePost={this.deletePost}
+              updatePostFn={this.updatePost}
+              deletePostFn={this.deletePost}
             />
           ))}
         </section>
