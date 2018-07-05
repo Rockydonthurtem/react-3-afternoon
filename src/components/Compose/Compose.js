@@ -21,6 +21,7 @@ export default class Compose extends Component {
   }
 
   createPost() {
+    console.log('hit')
     const { text } = this.state;
     const { createPostFn } = this.props;
 
@@ -49,7 +50,7 @@ export default class Compose extends Component {
         </div>
 
         <div className="Compose__bottom">
-          <button onClick={this.props.createPost}>Compose</button>
+          <button onClick={this.createPost}>Compose</button>
         </div>
       </section>
     );

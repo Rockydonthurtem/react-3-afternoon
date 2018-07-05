@@ -13,6 +13,7 @@ export default class Edit extends Component {
     };
 
     this.updatePost = this.updatePost.bind(this);
+    this.updateText = this.updateText.bind(this);
   }
 
   updateText(value) {
@@ -22,7 +23,7 @@ export default class Edit extends Component {
   updatePost() {
     const { text } = this.state;
     const { id, updatePostFn, hideEdit } = this.props;
-
+    console.log(updatePostFn)
     updatePostFn(id, text);
     hideEdit();
   }
